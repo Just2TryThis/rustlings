@@ -7,9 +7,17 @@
 
 // I AM NOT DONE
 
+//fn main() {
+//    let cat = ("Furry McFurson", 3.5);
+//    let cat2 = cat;
+//    let ((&cat,[1],name),(&cat2,[2],age)) = cat;
+//
+//    println!("{} is {} years old.", name, age);
+//}
+
 fn main() {
     let cat = ("Furry McFurson", 3.5);
-    let /* your pattern here */ = cat;
+    let (name,age) = cat;
 
     println!("{} is {} years old.", name, age);
 }
