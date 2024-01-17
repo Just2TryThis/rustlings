@@ -11,7 +11,9 @@ pub fn foo_if_fizz(fizzish: &str) -> &str {
     if fizzish == "fizz" {
         "foo"
     } else {
-        1
+        if fizzish == "fuzz"{
+            "bar"
+        } else { "baz"}
     }
 }
 
