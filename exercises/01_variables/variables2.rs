@@ -6,10 +6,11 @@
 // I AM NOT DONE
 
 fn main() {
-    let x;
+    let x = 10;
     if x == 10 {
         println!("x is ten!");
-    } else {
+    } 
+    else {
         println!("x is not ten!");
     }
 }
