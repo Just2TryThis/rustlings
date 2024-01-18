@@ -1,1 +1,40 @@
+Exo 1 : Recherche IT pour avoir la valeur contenue dans l'option -> unwrap -> assert_eq!(icecreams.unwrap(), 5);
+        Le code doit retourner some(5) si avant 22h, et none si après 
+
+    if time_of_day < 22 { Some(5) 
+    } else { None }
+
+        TEST -> ça fonctionne mais manque Some(0) ! 
+
+    if time_of_day < 22 { Some(5) 
+    } else { if time_of_day < 25 {Some(0) 
+    } else { None }}
+
+      TEST ----> ça fonctionne ! 
+
+Exo 2 : TODO: Make this an if let statement whose value is "Some" type
+        word = optional_target -> if let Some(word) = optional_target 
+
+        TODO: make this a while let statement - remember that vector.pop also
+        adds another layer of Option<T>. You can stack `Option<T>`s into
+        while let and if let.
+        Avec la doc option enum assez simple de trouver : 
+      integer = optional_integers.pop() -> while let Some(integer) = optional_integers.pop() 
+
+      TEST --> Fonctionne mais un des test :/ !
+        On a deja push un Some(i) dans interger -> while let Some(Some(integer)) = optional_integers.pop()
+
+      TEST --> ça fonctionne ! 
+
+Exo 3 : Test compilation : ERROR -> use of partially moved value: `y` 
+        Proposition d'utiliser ref : 
+ Some(p) => println!("Co-ordinates are {},{} ", p.x, p.y), ->  Some(ref p) => println!("Co-ordinates are {},{} ", p.x, p.y),
+
+        TEST -> ça fonctionne ! 
+
+
+
+
+
+
 
