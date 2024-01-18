@@ -6,9 +6,11 @@
 // I AM NOT DONE
 
 #[derive(Debug)]
-enum Message {
-    // TODO: define the different variants used below
-}
+enum Message { 
+        Quit,
+        Echo(String),
+        Move { x: i32, y: i32 },
+        ChangeColor(i32, i32, i32), }
 
 impl Message {
     fn call(&self) {
