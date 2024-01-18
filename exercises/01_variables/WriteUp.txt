@@ -1,0 +1,13 @@
+Exo 1 : Besoin de let pour initialiser la valeur 
+
+Exo 2 : Ajout d une valeur à x (10 dans ce cas la) 
+
+Exo 3 : Pareil, le type ne donne pas de valeur, il à fallut en ajouter une 
+
+Exo 4 : Modification de la valeur x, il faut la passer en mutable 
+
+Exo 5 : Utilisation de la variable "number" dans le println!, une nouvelle initialisation est necessaire 
+
+Exo 6 : Necessite l ajout du type lors dans la constante 
+
+La majorité de ces réponses se trouve assez facilement avec les erreurs donnée par le compilateur
