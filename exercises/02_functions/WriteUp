@@ -1,1 +1,9 @@
+Exo 1 : Appel d'une fonction qui n'existe pas, implementation de la fonction manquante 
 
+Exo 2 : Necessite le type de la variable dans la fonction call_me pour la boucle, ajout du type (i64) 
+
+Exo 3 : Manque une valeur dans main qui sera utiliser, ajout d'une valeur fixe (ajout d'une variable également possible) 
+
+Exo 4 : Besoin du type de sortie de la fonction sale_price i32 
+
+Exo 5 : Besoin d'attribuer le calcule ainsi que le résultat à une valeur, return la valeur de la fonction vers le main
