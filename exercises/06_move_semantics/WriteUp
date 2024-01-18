@@ -1,1 +1,27 @@
+Exo 1 : Besoin de passer vec dans la fonction en mutable, trouvé avec le compilateur 
 
+Exo 2 : Erreur dans la compilation, le moove empeche de réutiliser la valeur, le compilateur annonce que copy est indisponible
+        Utilisation de clone à la place comme proposé :     let mut vec1 = fill_vec(vec0.clone());
+
+Exo 3 : Problème detecter sans compilateur
+          Utilisation de push sur une variable non mutable 
+            Modification directement dans la fonction -> test OK 
+
+Exo 4 : Erreur avec le compilateur, besoin de modifier :   let mut vec = vec;
+
+        Test proposer par le compilateur :  let mut vec1 = fill_vec(vec0); ne fonctionne pas 
+        Sans la variable utliser :  let mut vec1 = fill_vec(); l'erreur n'est plus la même elle descend vers : vec.push(88) 
+        Changement des noms des variable / vec1.push / vec0.push  /// Ne fonctionne pas 
+
+
+
+Exo 5 : Erreur de compilateur au niveau de l'ordre de borrow et de l'utilisation des borrow, aucune aide proposer 
+        Recherche sur https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html donnée par le README 
+        On apprend que :
+                        Two or more pointers access the same data at the same time.
+                        At least one of the pointers is being used to write to the data.
+        J'ai donc mis l'action effectuer sur le premier borrow avant le second borrow et ça à fonctionner  
+
+Exo 6 : A première vu on à un exemple de ownership et sans ownership, on à juste à intervertir les & 
+        Test compil sans modif pour voir : erreur 
+        Echange des &, compile : RUST IS GREAT ! ça fonctionne 
