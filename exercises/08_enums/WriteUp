@@ -36,5 +36,13 @@ Exo 3 : Au vu des state.process et des assert_eq à la fin, l'enum est la même 
                 ça compile mais fail le test  
                 Lors du test il reset les info des variables, ensuite les initialise avec state.process et les compares
       
-        Il y a un cas similaire à ce que demande le todo dans la doc 
+        Il y a un cas similaire à ce que demande le todo dans la doc eet sur 
+        Il faut faire un match message pour chacun des cas possible, en appelant les valeurs leurs correspondant 
+        x, y, z dans fn ChangeColor // s dans fn Echo // p dans fn move_position// 
+        Ensuite chacun appel la fonction correspondante
 
+        match message {
+            Message::ChangeColor(x, y, z) => self.change_color((x,y,z)),
+            Message::Quit => self.quit(),
+            Message::Echo(s) => self.echo(s),  
+            Message::Move(p) => self.move_position(p),                  }    --> ça fonctionne !
