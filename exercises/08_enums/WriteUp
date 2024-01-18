@@ -3,26 +3,26 @@ Exo 1 : Vu en cours les enum, element séparer d'une virgule : enum Message {Qui
 Exo 2 : Ajout des element dans enum avec les valeurs utilisées dans la suite du programme : 
 
         enum Message { 
-            ChangeColor(200, 255, 255), 
-            Quit,
+            Move { x: 10, y: 30 },
             Echo("hello world"),
-            Move { x: 10, y: 30 },}
+            ChangeColor(200, 255, 255), 
+            Quit,}
   
         ERROR -> expexted type /// Verif doc enum du README --> Changement des valeurs vers le type i32 
 
         enum Message { 
-            ChangeColor(i32, i32, i32), 
-            Quit,
+            Move { x: i32, y: i32 },
             Echo("hello world"),
-            Move { x: i32, y: i32 },}
+            ChangeColor(i32, i32, i32), 
+            Quit,}
 
         ERROR -> expexted type /// Changement des valeurs vers le type string
 
         enum Message { 
-            ChangeColor(i32, i32, i32), 
-            Quit,
+            Move { x: i32, y: i32 },
             Echo(String),
-            Move { x: i32, y: i32 },}                      ---> ça fonctionne !! 
+            ChangeColor(i32, i32, i32), 
+            Quit,}                                                      ---> ça fonctionne !! 
 
 Exo 3 : Au vu des state.process et des assert_eq à la fin, l'enum est la même ormis Move qui prend maintenant la structure Point
 
