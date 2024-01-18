@@ -1,1 +1,23 @@
+Raccourcis parce que j'ai perdu le doc.. 
+
+Exo 1: Compilation sans ??? -> code erreur donne la solution https://doc.rust-lang.org/stable/error_codes/E0603.html
+
+
+Exo 2: Compilation sans ??? -> rien d'interessant 
+       Ensuite j'ai litteralement essayer tout les truc dans le code : 
+
+    use self::fruits::PEAR as XXX;
+    use self::veggies::CUCUMBER as XXX;
+
+XXX -> i32 / u8/ PEAR/ CUCUMBER/ CARROT/ APPLE/ etc.. 
+
+      Jusqu'a tomber sur "as fruit;" qui fonctionne, j'ai donc essayer "veggie;" qui à fonctionner également 
+
+
+Exo 3 : Compiler sans "use" 
+        Error : failed to resolve: use of undeclared type `SystemTime` 
+        Recherche sur systemTime donne info utilisation std::time // duration // systemtime // UNIX_EPOCH // 
+        Egalement un exemple, use std::time::{SystemTime, UNIX_EPOCH, Duration}; que j'ai réutiliser 
+
+        TEST --------> ça fonctionne ! 
 
