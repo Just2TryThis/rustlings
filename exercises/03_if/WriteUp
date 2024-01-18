@@ -1,1 +1,7 @@
+Exo 1 : Ajout de la comparaison entre a et b, avec un return celon le plus petit ( à noter que le code ne prend pas en charge les cas ou a et b sont égaux) 
 
+Exo 2 : A l'aide des fonction dans #[cfg(test)], besoin de deux if, une pour chacune des sortie spécifique : foo & bar, et le derniers else qui englobe le tout
+
+Exo 3 : Changement des sortie de if, enlever chiffre à virgule et remplacer "unknow" par une valeur numérique 
+
+Mis à part l'exo 3 qui est aidé par le compilateur, la solution aux deux premier ce trouve dans le cour donné dans le README du repo
