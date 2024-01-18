@@ -1,1 +1,13 @@
+Exo 1 : Besoin de let pour initialiser la valeur 
 
+Exo 2 : Initianliser la valeur de x (10) 
+
+Exo 3 : Manque la velur d'initialisation 
+
+Exo 4 : Necessite que x soit mutable (changement de valeur) 
+
+Exo 5 : Utilisation de la variable dans println!, besoin de l'initialiser de nouveau -> let 
+
+Exo 6 : Besoin du type de la constante 
+
+La majorite de ces réponses s'obtiennent assez facilement avec le compilateur rust.
