@@ -18,7 +18,7 @@
 
 use std::collections::HashMap;
 
-#[derive(Hash, PartialEq, Eq)]
+#[derive(Clone, Copy, PartialEq, Eq, Hash)]
 enum Fruit {
     Apple,
     Banana,
@@ -35,13 +35,16 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
         Fruit::Lychee,
         Fruit::Pineapple,
     ];
-
-    for fruit in fruit_kinds {
-        // TODO: Insert new fruits if they are not already present in the
-        // basket. Note that you are not allowed to put any type of fruit that's
-        // already present!
+    
+    for (index, fruit) in fruit_kinds.iter().enumerate() {
+        // Vérifier si le fruit n'est pas déjà dans le panier
+        if !basket.contains_key(fruit) {
+            if index == 0 {basket.insert(*fruit, 10);
+            } else { basket.insert(*fruit, 1);}
+        }
     }
 }
+
 
 #[cfg(test)]
 mod tests {
