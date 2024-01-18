@@ -7,10 +7,10 @@
 
 #[derive(Debug)]
 enum Message { 
+        ChangeColor(i32, i32, i32), 
         Quit,
         Echo(String),
-        Move { x: i32, y: i32 },
-        ChangeColor(i32, i32, i32), }
+        Move { x: i32, y: i32 },}
 
 impl Message {
     fn call(&self) {
