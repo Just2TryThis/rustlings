@@ -1,1 +1,40 @@
+Exo 1 : Vu en cours les enum, element séparer d'une virgule : enum Message {Quit,Echo, Move,ChangeColor,}
+
+Exo 2 : Ajout des element dans enum avec les valeurs utilisées dans la suite du programme : 
+
+        enum Message { 
+            ChangeColor(200, 255, 255), 
+            Quit,
+            Echo("hello world"),
+            Move { x: 10, y: 30 },}
+  
+        ERROR -> expexted type /// Verif doc enum du README --> Changement des valeurs vers le type i32 
+
+        enum Message { 
+            ChangeColor(i32, i32, i32), 
+            Quit,
+            Echo("hello world"),
+            Move { x: i32, y: i32 },}
+
+        ERROR -> expexted type /// Changement des valeurs vers le type string
+
+        enum Message { 
+            ChangeColor(i32, i32, i32), 
+            Quit,
+            Echo(String),
+            Move { x: i32, y: i32 },}                      ---> ça fonctionne !! 
+
+Exo 3 : Au vu des state.process et des assert_eq à la fin, l'enum est la même ormis Move qui prend maintenant la structure Point
+
+        enum Message {
+            ChangeColor(u8, u8, u8),
+            Quit,
+            Echo(String),
+            Move(Point),}
+
+        ERROR -> expexted type, ChangeColor est en u8 dans la suite du code, donc je le change dans enum :  ChangeColor(u8, u8, u8)
+                ça compile mais fail le test  
+                Lors du test il reset les info des variables, ensuite les initialise avec state.process et les compares
+      
+        Il y a un cas similaire à ce que demande le todo dans la doc 
 
