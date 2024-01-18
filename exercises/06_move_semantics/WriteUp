@@ -13,6 +13,11 @@ Exo 4 : Erreur avec le compilateur, besoin de modifier :   let mut vec = vec;
         Sans la variable utliser :  let mut vec1 = fill_vec(); l'erreur n'est plus la même elle descend vers : vec.push(88) 
         Changement des noms des variable / vec1.push / vec0.push  /// Ne fonctionne pas 
 
+        hint -> créer son propre vec, donc let mut vec = Vec::new(); 
+                J'ajoute les valeur avec push 22, 44, 66, et 88 --> Erreur de compilation 
+                Warning fill_vec mais ERROR -> let mut vec1 = fill_vec(vec0);
+                J'ignore si je peux modifier le main mais je decide d'enlever "vec0" ->> let mut vec1 = fill_vec(); --> ça fonctionne !
+                
 
 
 Exo 5 : Erreur de compilateur au niveau de l'ordre de borrow et de l'utilisation des borrow, aucune aide proposer 
