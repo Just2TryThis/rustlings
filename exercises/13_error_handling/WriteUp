@@ -50,4 +50,19 @@ Exo 5 : Compile : ERROR -> <<dyn >> at least one trait is required for an object
        TEST : ERROR could not compile `playground`
          Erreur dans l'ecriture,  Box<dyn std::error::Error>  ------> ça fonctionne !
 
+Exo 6 : add another error conversion function here. 
+        dupliquer la fonction précédente et la modifier
+
+    fn from_creation(err: CreationError) -> ParsePosNonzeroError {   |   fn from_parse(err: ParseIntError) -> ParsePosNonzeroError {
+        ParsePosNonzeroError::Creation(err) } }                      |          ParsePosNonzeroError::ParseInt(err)
+
+        TEST -> ça compile mais test_parse_error fail ??? 
+        let x: i64 = s.parse().unwrap();   ---->   let x: i64 = s.parse().map_err(ParsePosNonzeroError::from_parse)?;
+
+        TEST -> ça fonctionne ! 
+
+        
+                
+
+
 
