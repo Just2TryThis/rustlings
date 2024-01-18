@@ -5,19 +5,21 @@
 
 // I AM NOT DONE
 
-fn trim_me(input: &str) -> String {
-    // TODO: Remove whitespace from both ends of a string!
-    ???
-}
+      fn trim_me(input: &str) -> String {
+          let str_trim = input.trim();
+          let String = str_trim.to_string();
+          return String;
+      }
 
-fn compose_me(input: &str) -> String {
-    // TODO: Add " world!" to the string! There's multiple ways to do this!
-    ???
-}
+      fn compose_me(input: &str) -> String {
+          let String = input.to_string();
+          let String2 = String + " world!" ;
+          return String2
+      }
 
 fn replace_me(input: &str) -> String {
-    // TODO: Replace "cars" in the string with "balloons"!
-    ???
+    let String = input.replace("cars", "balloons");
+    return String
 }
 
 #[cfg(test)]
