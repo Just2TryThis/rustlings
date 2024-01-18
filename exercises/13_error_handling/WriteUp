@@ -1,1 +1,53 @@
+Exo 1 : Erreur compilation, option expexted result, 
+        Mise en place de result : Option<String> -> Result<String, String> 
+                                  None -> Err("`name` empty; cant be empty give a name ".into())
+                                  Some(format!("Hi! My name is {}", name)) -> Ok(format!("Hi! My name is {}", name))
+
+
+        TEST -> ça compile mais manque un test
+                                  Err("`name` empty; cant be empty give a name ".into()) -> Err("`name` was empty; it must be nonempty.".into())
+        TEST -> ça fonctionne ! 
+
+Exo 2 : test compilateur: ERROR -> : cannot multiply `Result<i32, ParseIntError>` by `{integer}`
+        Problème avec Result, manque erreur, ajout ? : 
+    let qty = item_quantity.parse::<i32>(); ->  let qty = item_quantity.parse::<i32>()?;
+
+
+Exo 3 : Test compilateur : ERROR -> the `?` operator can only be used in a function that returns `Result`
+        Besoin d'implementer Result: fn main() -> Result<(), ParseIntError> {
+                                     Ok(()) /// si pas d'err
+
+        TEST -> ça fonctionne ! 
+
+
+BONUS : A la base j'avais réussi à trouver sans utiliser Result, c'est un camarade qui m'a dit qu'il fallait l'implementer 
+        J'avais utilsier des cours educative.io et avait obtenu ça :
+pub fn total_cost(item_quantity: &str) -> Result<i32, ParseIntError> {
+    let processing_fee = 1;
+    let cost_per_item = 5;
+    let qty = item_quantity.parse::<i32>()?;
+
+    Ok(qty * cost_per_item + processing_fee)
+}
+
+        Qui fonctionne ! 
+
+
+
+Exo 4 : Compile mais test fail, PositiveNonzeroInteger à remplir. 
+        Verif si positif hors zero, donc if pos c'est bon, if neg err et if 0 err
+
+impl PositiveNonzeroInteger {
+    fn new(value: i64) -> Result<PositiveNonzeroInteger, CreationError> {
+        if value < 0 {Err(CreationError::Negative)
+        } else { if value == 0 {Err(CreationError::Zero)
+        } else { Ok(PositiveNonzeroInteger(value as u64)) }}
+    }
+}
+
+Exo 5 : Compile : ERROR -> <<dyn >> at least one trait is required for an object type
+        Box<dyn ???>> --> Box<dyn std::error::Error> 
+       TEST : ERROR could not compile `playground`
+         Erreur dans l'ecriture,  Box<dyn std::error::Error>  ------> ça fonctionne !
+
 
