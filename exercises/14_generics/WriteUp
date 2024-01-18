@@ -1,1 +1,18 @@
+Exo 1 : passage en str     let mut shopping_list: Vec<&str> = Vec::new();
+        TEST -> ça fonctionne ? 
+
+Exo 2 : Compilation : ERROR -> mismatched type 
+
+impl Wrapper { pub fn new(value: u32) -> Self {   |     impl<T> Wrapper<T> { pub fn new(value: T) -> Self {
+        Wrapper { value } } }                     |                Wrapper { value } } }
+
+      TEST : ERROR pas changer la structure : struct Wrapper {value: u32,} -> struct Wrapper {value: T,} -> 
+      TEST : ça fonctionne ?! 
+        
+
+
+
+
+
+
 
