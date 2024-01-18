@@ -1,1 +1,36 @@
+Exo 1 : Ajout de la variable utiliser après dans le code, ajout de son état (true or false) 
+        Erreur du compilateur, manque d'initialisation d'une variable 
 
+Exo 2 : Ajout de la variable utiliser après dans le code, ajout de sa valeur utilisée dans les comparaison 
+        Erreur du compilateur, manque d'initialisation d'une variable
+
+Exo 3 : Ajout de la valeur de a (plus marrant de dépasser les 100 caractère) 
+        Erreur du compilateur vers le manque de valeur de a 
+
+Exo 4 : Ajout de la slice [1..4] prenant la deuxième valeur jusqu'à la 4ème (le 4 etant la 5eme valeur exclu) 
+        Erreur du compilatuer vers les points d'interrogation, au vu de la comparaison faite après on sait quels sont les valeurs necessaire en sortie, 
+        à l'aide du cours sur les slice utilisation de &<variable> 
+
+Exo 5 : On peut initialiser une variable ou plusieurs variable à l'aide d'une variable préexistante, ici on récupère les deux valeurs contenu dans la première variable
+        Au début j'ai tenté de récupérer les valeurs via slice : let ((&cat,[1],name),(&cat2,[2],age)) = cat;  (j'ai même doubler cat avec cat2 
+        Impossible à faire fonctionner, à l'aide du cours https://doc.rust-lang.org/stable/book/ch03-02-data-types.html 
+          On apprend la solution avec un exemple : 
+
+              fn main() {
+                  let tup = (500, 6.4, 1);
+                  let (x, y, z) = tup;
+                  println!("The value of y is: {y}");
+              }
+
+Exo 6 : Premier test au vu des vérification suivante j'ai utilisé : let second = 2; Le résultat necessaire semble bien être 2
+        Après quelques recherche je trouve que En Rust, les tuples utilisent un accès par point (.) pour accéder à leurs éléments, 
+        plutôt que l'accès par crochets ([]) utilisé pour les tableaux et les vecteurs. 
+        On y trouve un exemple, celui dont j'ai repris le focntionnement : 
+
+            fn indexing_tuple_example() {
+                let person = ("Alice", 30, "Engineer");
+
+                // Accès aux éléments du tuple
+                let name = person.0;
+                let age = person.1;
+                let occupation = person.2;
