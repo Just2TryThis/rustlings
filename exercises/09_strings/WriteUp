@@ -1,1 +1,48 @@
+Exo 1 : Test compilateur : ERROR -> expected `String` because of return type 
+        Compilateur propose .to_string() : "blue".to_string() // TEST                 --> ça fonctionne ! 
+
+Exo 2 : Test compilateur : ERROR -> expected `&str`, found `String`
+        Compilateur propose & : if is_a_color_word(&word) / passage par une référence à la chaine plutot que la chaine 
+                                                                                      --> ça fonctionne ! 
+
+Exo 3 : Pour ce code je vais le diviser en trois, la partie 1 avec test 1, partie 2 test 2 et partie 3 test 3 
+        Pour la partie 1 j'ai trouver sur educative.io le fonctionnement de trim
+        Je vais donc récupérer l'&str -> la trim -> la passer en String -> et la return
+
+      trim   : let str_trim = input.trim(); 
+      String : let String = str_trim.to_string();
+      Return : return String
+        TEST -> ça fonctionne !
+
+      fn trim_me(input: &str) -> String {
+          let str_trim = input.trim();
+          let String = str_trim.to_string();
+          return String;
+      }
+
+        Pour la partie 2 également sur educative.io 
+        La première ligne crée une nouvelle String avec l'input
+        La deuxième ligne ajoute la chaîne " world!" a la fin
+        Enfin, la troisième ligne return la String complète
+        
+      fn compose_me(input: &str) -> String {
+          let String = input.to_string();
+          let String2 = String + " world!" ;
+          return String2
+      }
+        TEST -> ça fonctionne ! 
+
+
+        Pour la dernière partie encore educative.io 
+        La premiière ligne va replace cars par balloons avec input.replace 
+        Ensuite on return la String 
+
+      fn replace_me(input: &str) -> String {
+          let String = input.replace("cars", "balloons");
+          return String
+      }      
+
+        TEST -> ça fonctionne ! ---> Maintenant test les trois en même temps --------> ça fonctionne ! 
+
+
 
