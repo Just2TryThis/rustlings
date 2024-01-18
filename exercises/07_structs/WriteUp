@@ -36,7 +36,22 @@ Exo 2 : Que un TODO, test compilation -> "error, unknown field"
           	                    ..order_template};                       --> ça conftionne ! 
         
         
+Exo 3 : Demande de definir les type de sortie, is_international est une demande booléenne, en effet soit c'est internationnal, soit ça ne l'est pas 
+        fn is_international(&self) -> bool
+        Vérifier si sender_country = recipient_country
+        Recherche sur les comparaison en rust, test : 
+
+    fn is_international(&self) -> bool {
+        sender_country != recipient_country
+    }
+
+        Error -> compilateur propose self.sender_country != self.recipient_country  //// test -> ça compile ! 
+        Supprime get_fees et les test en lien, pour voir si les test concernant is_internantional sont bon /// test --> ça fonctionne 
+
+        fn get_fees maintenant, entrée en u32 test sortie en u32 
+        test : self.weight_in_grams != cents_per_gram -> error booléen
+        test : self.weight_in_grams = cents_per_gram -> error 
+        test : self.weight_in_grams + cents_per_gram -> compile ! but failed test 
+        test : self.weight_in_grams * cents_per_gram -> compile ! test ok                 ---> ça fonctionne 
         
-
-
 
