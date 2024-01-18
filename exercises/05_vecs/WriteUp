@@ -1,1 +1,7 @@
+Exo 1 : Initialisation de la variable en mode vecteur  (dans le cours et le README) au vu des comparaison, il faut que v = a
 
+Exo 2 : Mutiplier par deux vers qui pointe elem dans la première boucle avec *, dans le seconde multiplier directement elem. 
+        Au début j'était partis sur le diviser en 4 étape en récupérant elem dans une autre variable, faire les calcule et lui reimplementer a valeur, 
+        mais ça ne fonctionnait pas. 
+        Ensuite la donc iter_mut et map qui montre des situation similaire, j'ai donc mis en commentaire mes essai ainsi que l'exemple et l'ai 
+        appliqué en modifiant le nom des variable
